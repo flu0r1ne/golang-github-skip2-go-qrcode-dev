@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+export DH_GOLANG_BUILDPKG := github.com/skip2/go-qrcode $\
+	github.com/skip2/go-qrcode/bitset $\
+	github.com/skip2/go-qrcode/reedsolomon
+
+%:
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
